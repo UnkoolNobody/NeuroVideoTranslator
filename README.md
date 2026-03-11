@@ -73,18 +73,18 @@ If your language is not listed, try its ISO 639-1 code (two letters) or ISO 639-
 Если ваш язык не указан, попробуйте его код ISO 639-1 (две буквы) или ISO 639-3 (три буквы). Программа попытается сопоставить его автоматически.
 
 ## Command Line Arguments / Параметры командной строки
-usage: video_translator.py [-h]/ 
-[--target-lang TARGET_LANG]/
-[--source-lang SOURCE_LANG]/
-[--speaker ID PATH]/
-[--num-speakers NUM_SPEAKERS]/
-[--output OUTPUT]/
-[--no-subtitles]/
-[--no-noise]/
-[--whisper-model {tiny,base,small,medium,large-v3}]/
-[--nllb-model NLLB_MODEL]/
-[--subtitle SUBTITLE]/
-[--generate-subs-only]/
+usage: video_translator.py [-h] 
+[--target-lang TARGET_LANG]
+[--source-lang SOURCE_LANG]
+[--speaker ID PATH]
+[--num-speakers NUM_SPEAKERS]
+[--output OUTPUT]
+[--no-subtitles]
+[--no-noise]
+[--whisper-model {tiny,base,small,medium,large-v3}]
+[--nllb-model NLLB_MODEL]
+[--subtitle SUBTITLE]
+[--generate-subs-only]
 [videos ...]
 
 
