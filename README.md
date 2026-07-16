@@ -85,6 +85,7 @@ usage: video_translator.py [-h]
 [--nllb-model NLLB_MODEL]
 [--subtitle SUBTITLE]
 [--generate-subs-only]
+[--aggressive-speed]
 [videos ...]
 
 
@@ -102,6 +103,7 @@ usage: video_translator.py [-h]
 | `--nllb-model` | NLLB translation model (default: facebook/nllb-200-distilled-600M). / Модель перевода NLLB. |
 | `--subtitle`, `-sub` | Path to an external SRT subtitle file. The program will use its text for synthesis, skipping recognition and translation. / Путь к внешнему файлу субтитров SRT. Программа использует его текст для синтеза, пропуская распознавание и перевод. |
 | `--generate-subs-only` | Only generate original subtitles from the video and exit (no synthesis, no mixing). / Только создать оригинальные субтитры из видео и завершиться (без синтеза и микширования). |
+| `--aggressive-speed` | Allow extreme speech speedup (up to 2.5×) to prevent overlaps between segments. Useful for fast speech or dense dialogs. / Разрешить экстремальное ускорение речи (до 2.5×) для предотвращения наложений между сегментами. Полезно для быстрой речи или плотных диалогов. |
 
 ## Examples / Примеры использования
 
