@@ -70,9 +70,9 @@ The program uses language codes compatible with Whisper, NLLB, and XTTS. Below i
 | Thai / Тайский        | th         |
 | Vietnamese / Вьетнамский | vi      |
 
-If your language is not listed, try its ISO 639-1 code (two letters) or ISO 639-3 code (three letters). The program will attempt to map it automatically.
+If your language is not listed, try its ISO 639-1 code (two letters) or ISO 639-3 code (three letters). The program will attempt to map it automatically (NOT GUARANTEED TO WORK).
 
-Если ваш язык не указан, попробуйте его код ISO 639-1 (две буквы) или ISO 639-3 (три буквы). Программа попытается сопоставить его автоматически.
+Если ваш язык не указан, попробуйте его код ISO 639-1 (две буквы) или ISO 639-3 (три буквы). Программа попытается сопоставить его автоматически (РАБОТОСПОСОБНОСТЬ НЕ ГАРАНТИРОВАНА).
 
 ## Command Line Arguments / Параметры командной строки
 usage: video_translator.py [-h] 
@@ -107,7 +107,7 @@ usage: video_translator.py [-h]
 | `--generate-subs-only` | Only generate original subtitles from the video and exit (no synthesis, no mixing). / Только создать оригинальные субтитры из видео и завершиться (без синтеза и микширования). |
 | `--aggressive-speed` | Allow extreme speech speedup (up to 2.5×) to prevent overlaps between segments. Useful for fast speech or dense dialogs. / Разрешить экстремальное ускорение речи (до 2.5×) для предотвращения наложений между сегментами. Полезно для быстрой речи или плотных диалогов. |
 
-## Examples / Примеры использования
+## Usage Examples / Примеры использования
 
 **1. Basic translation and dubbing / Базовый перевод и озвучка**
 python video_translator.py video.mp4 --target-lang ru
@@ -141,12 +141,14 @@ pip install torch torchaudio whisper transformers resemblyzer librosa soundfile 
 
 ## Notes / Примечания
 
+EN:
 - The first run may download several large models (Whisper, NLLB, XTTS, Demucs). Ensure sufficient disk space and a stable internet connection.
 - Voice cloning works best with at least 5–10 seconds of clean reference audio per speaker.
 - For videos with multiple speakers, the program attempts to automatically extract voice samples. If it fails, provide them manually via `--speaker`.
 - When using external subtitles, the program expects the text to be in the target language (no translation is performed). Speaker labels in the subtitles (e.g., "SPEAKER_00: text") are used to assign voices.
 - The `--generate-subs-only` mode produces two SRT files: `video_original.srt` and `video_translated.srt`. The translated one is ready for editing and later use with `--subtitle`.
 
+RU:
 - При первом запуске могут загружаться несколько больших моделей (Whisper, NLLB, XTTS, Demucs). Убедитесь в достаточном месте на диске и стабильном интернет-соединении.
 - Клонирование голоса работает лучше всего с 5–10 секундами чистого референсного аудио на спикера.
 - Для видео с несколькими спикерами программа пытается автоматически извлечь образцы голоса. При неудаче укажите их вручную через `--speaker`.
@@ -155,12 +157,14 @@ pip install torch torchaudio whisper transformers resemblyzer librosa soundfile 
 
 ## Troubleshooting / Устранение неполадок
 
+EN:
 - **FFmpeg not found**: Install FFmpeg and add it to your PATH.
 - **Out of memory**: Reduce Whisper model size (e.g., `--whisper-model small`).
 - **No voice samples extracted**: Provide samples manually with `--speaker`.
 - **Poor audio quality**: Ensure background noise preservation is enabled (default). If using Demucs, try the `htdemucs_6s` model for better separation.
 - **Slow processing**: Use a GPU if available. Set `--whisper-model tiny` for faster (but less accurate) transcription.
 
+RU:
 - **FFmpeg не найден**: Установите FFmpeg и добавьте его в PATH.
 - **Не хватает памяти**: Уменьшите размер модели Whisper (например, `--whisper-model small`).
 - **Не удалось извлечь образцы голоса**: Укажите образцы вручную через `--speaker`.
