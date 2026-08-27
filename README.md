@@ -6,6 +6,7 @@ This program translates videos into another language while preserving the origin
 
 ## Features / Функциональные возможности
 
+EN:
 - Extracts audio from video (FFmpeg required).
 - Speech recognition with timestamps (Whisper).
 - Speaker diarization without API tokens (Silero VAD + Resemblyzer).
@@ -18,6 +19,7 @@ This program translates videos into another language while preserving the origin
 - Support for external subtitle files (SRT) to synthesize speech from them.
 - Mode to generate only subtitles without synthesis.
 
+RU:
 - Извлечение аудио из видео (требуется FFmpeg).
 - Распознавание речи с таймкодами (Whisper).
 - Диаризация спикеров без токенов (Silero VAD + Resemblyzer).
